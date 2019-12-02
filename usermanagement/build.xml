@@ -1,0 +1,37 @@
+<project name="usermanagment" basedir="." default="test">
+	
+	<property name="main-java-dir" value="${basedir}/src/main/java"/>
+	<property name="build-dir" value="${basedir}/target"/>
+	<property name="test-java-dir" value="${basedir}/src/test/java"/>
+	
+	<target name="clean">
+		<delete dir="${build-dir}"/>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="${build-dir}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="${main-java-dir}" destdir="${build-dir}"/>
+	</target>
+	
+	<target name="test-compile">
+		<javac srcdir="${test-java-dir}" destdir="${build-dir}"/>
+	</target>
+	
+	<target name="test" depends="test-compile">
+		<junit>
+			<classpath>
+				<pathelement location="${build-dir}"/>
+			</classpath>
+			<batchtest>
+				<fileset dir="${build-dir}" >
+					<include name="**/*Test*.class"/>
+				</fileset>
+			</batchtest>
+			
+			<formatter type="plain"/>
+		</junit>
+	</target>
+</project>

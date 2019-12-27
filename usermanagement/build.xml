@@ -22,7 +22,7 @@
         		<pathelement location="${build-dir}"/>
         	</classpath>
         	<formatter type="plain"/>
-        	<test name="ua.nure.cs.petrykin.usermanagement.domain.UserTest"/>
+        	<test name="ua.nure.rakhman.usermanagement.domain.UserTest"/>
         </junit>
     </target>
 

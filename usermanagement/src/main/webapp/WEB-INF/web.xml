@@ -3,17 +3,17 @@
 <web-app version="2.4">
 	<servlet>
 		<servlet-name>Browse Servlet</servlet-name>
-		<servlet-class>ua.nure.cs.petrykin.usermanagement.web.BrowseServlet</servlet-class>
+		<servlet-class>ua.nure.rakhman.usermanagement.web.BrowseServlet</servlet-class>
 	</servlet>
 	
 	<servlet>
 		<servlet-name>Add Servlet</servlet-name>
-		<servlet-class>ua.nure.cs.petrykin.usermanagement.web.AddServlet</servlet-class>
+		<servlet-class>ua.nure.rakhman.usermanagement.web.AddServlet</servlet-class>
 	</servlet>
 	
 	<servlet>
 		<servlet-name>Edit Servlet</servlet-name>
-		<servlet-class>ua.nure.cs.petrykin.usermanagement.web.EditServlet</servlet-class>
+		<servlet-class>ua.nure.rakhman.usermanagement.web.EditServlet</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
